@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutRaizScanner"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_tela_arcade"
+    android:orientation="vertical"
+    tools:context=".ScannerMensagensActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarScanner"
+        style="@style/PocketArcade.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:navigationContentDescription="@string/cd_voltar"
+        app:navigationIcon="@drawable/ic_voltar"
+        app:title="@string/titulo_scanner"
+        tools:subtitle="Jogador: Ana" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollScanner"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margem_tela">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilMensagem"
+                style="@style/PocketArcade.CampoTexto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_mensagem"
+                app:helperText="@string/ajuda_mensagem"
+                app:startIconContentDescription="@string/hint_mensagem"
+                app:startIconDrawable="@drawable/ic_mensagem">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etMensagem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|start"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:maxLength="300"
+                    android:minLines="2" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margem_media"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAnalisar"
+                    style="@style/Widget.Material3.Button.Icon"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margem_pequena"
+                    android:layout_weight="1"
+                    android:text="@string/botao_analisar"
+                    app:icon="@drawable/ic_lupa" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnLimpar"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/botao_limpar" />
+            </LinearLayout>
+
+            <!-- Painel de resultado: aparece com ViewPropertyAnimator -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardResultadoScanner"
+                style="@style/PocketArcade.Painel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margem_tela"
+                android:visibility="gone"
+                app:strokeColor="@color/neon_ciano"
+                tools:visibility="visible">
+
+                <TableLayout
+                    android:id="@+id/tabelaResultado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margem_tela"
+                    android:shrinkColumns="1"
+                    android:stretchColumns="0">
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/tvCabecalhoMedida"
+                            style="@style/PocketArcade.Rotulo"
+                            android:paddingBottom="@dimen/margem_pequena"
+                            android:text="@string/cabecalho_medida" />
+
+                        <TextView
+                            android:id="@+id/tvCabecalhoResultado"
+                            style="@style/PocketArcade.Rotulo"
+                            android:gravity="end"
+                            android:paddingBottom="@dimen/margem_pequena"
+                            android:text="@string/cabecalho_resultado" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            style="@style/PocketArcade.CelulaTabela"
+                            android:text="@string/medida_caracteres" />
+
+                        <TextView
+                            android:id="@+id/tvResultadoCaracteres"
+                            style="@style/PocketArcade.CelulaTabela.Valor"
+                            tools:text="3" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            style="@style/PocketArcade.CelulaTabela"
+                            android:text="@string/medida_palavras" />
+
+                        <TextView
+                            android:id="@+id/tvResultadoPalavras"
+                            style="@style/PocketArcade.CelulaTabela.Valor"
+                            tools:text="1" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            style="@style/PocketArcade.CelulaTabela"
+                            android:text="@string/medida_vogais" />
+
+                        <TextView
+                            android:id="@+id/tvResultadoVogais"
+                            style="@style/PocketArcade.CelulaTabela.Valor"
+                            tools:text="2" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            style="@style/PocketArcade.CelulaTabela"
+                            android:text="@string/medida_invertido" />
+
+                        <TextView
+                            android:id="@+id/tvResultadoInvertido"
+                            style="@style/PocketArcade.CelulaTabela.Valor"
+                            android:layout_marginStart="@dimen/margem_media"
+                            tools:text="anA" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            style="@style/PocketArcade.CelulaTabela"
+                            android:text="@string/medida_palindromo" />
+
+                        <TextView
+                            android:id="@+id/tvResultadoPalindromo"
+                            style="@style/PocketArcade.CelulaTabela.Valor"
+                            tools:text="Sim" />
+                    </TableRow>
+                </TableLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/barraNavegacao"
+        layout="@layout/barra_navegacao_desafio" />
+</LinearLayout>

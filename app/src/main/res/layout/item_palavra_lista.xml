@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardPalavraLista"
+    style="@style/PocketArcade.Painel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardCornerRadius="14dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/margem_media">
+
+        <ImageView
+            android:id="@+id/imgCategoria"
+            android:layout_width="@dimen/icone_pequeno"
+            android:layout_height="@dimen/icone_pequeno"
+            android:background="@drawable/bg_icone_painel"
+            android:contentDescription="@string/rotulo_categoria"
+            android:padding="9dp"
+            app:tint="@color/neon_rosa"
+            tools:src="@drawable/ic_filme" />
+
+        <TextView
+            android:id="@+id/tvPalavra"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margem_media"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textAppearance="?attr/textAppearanceTitleMedium"
+            android:textColor="@color/texto_claro"
+            tools:text="Matrix" />
+
+        <TextView
+            android:id="@+id/tvCategoria"
+            style="@style/PocketArcade.Chip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margem_pequena"
+            tools:text="Filmes" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

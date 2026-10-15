@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margem_tela">16dp</dimen>
+    <dimen name="margem_media">12dp</dimen>
+    <dimen name="margem_pequena">8dp</dimen>
+    <dimen name="margem_minima">4dp</dimen>
+    <dimen name="raio_painel">20dp</dimen>
+    <dimen name="logo_apresentacao">120dp</dimen>
+    <dimen name="icone_painel">56dp</dimen>
+    <dimen name="icone_pequeno">40dp</dimen>
+    <dimen name="botao_jogada">84dp</dimen>
+    <dimen name="imagem_batalha">96dp</dimen>
+    <dimen name="altura_minima_painel">168dp</dimen>
+    <dimen name="texto_placar">40sp</dimen>
+    <dimen name="texto_codigo">34sp</dimen>
+    <dimen name="texto_historico">18sp</dimen>
+    <dimen name="deslocamento_animacao">24dp</dimen>
+    <dimen name="borda_normal">1dp</dimen>
+    <dimen name="borda_destaque">3dp</dimen>
+</resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardPalavraGrade"
+    style="@style/PocketArcade.Painel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardCornerRadius="14dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/margem_media">
+
+        <ImageView
+            android:id="@+id/imgCategoria"
+            android:layout_width="@dimen/icone_painel"
+            android:layout_height="@dimen/icone_painel"
+            android:background="@drawable/bg_icone_painel"
+            android:contentDescription="@string/rotulo_categoria"
+            android:padding="14dp"
+            app:tint="@color/neon_rosa"
+            tools:src="@drawable/ic_comida" />
+
+        <TextView
+            android:id="@+id/tvPalavra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margem_pequena"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="2"
+            android:textAppearance="?attr/textAppearanceTitleSmall"
+            android:textColor="@color/texto_claro"
+            tools:text="Pastel de feira" />
+
+        <TextView
+            android:id="@+id/tvCategoria"
+            style="@style/PocketArcade.Chip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margem_minima"
+            tools:text="Comidas" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

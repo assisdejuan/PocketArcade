@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Ícone de cada categoria (mesma ordem de @array/categorias_sorteio) -->
+    <array name="icones_categorias">
+        <item>@drawable/ic_filme</item>
+        <item>@drawable/ic_comida</item>
+        <item>@drawable/ic_lugar</item>
+        <item>@drawable/ic_desafio</item>
+        <item>@drawable/ic_jogo</item>
+    </array>
+
+    <!-- Itens iniciais de cada categoria (mesma ordem de @array/categorias_sorteio) -->
+    <array name="itens_por_categoria">
+        <item>@array/itens_filmes</item>
+        <item>@array/itens_comidas</item>
+        <item>@array/itens_lugares</item>
+        <item>@array/itens_desafios</item>
+        <item>@array/itens_jogos</item>
+    </array>
+</resources>

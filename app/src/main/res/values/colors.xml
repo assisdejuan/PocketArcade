@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Paleta "Fliperama Neon" -->
+    <color name="noite_arcade">#0D0B1E</color>
+    <color name="painel_arcade">#1A1640</color>
+    <color name="painel_destaque">#2A2463</color>
+    <color name="borda_painel">#3D3590</color>
+    <color name="texto_claro">#F3F1FF</color>
+    <color name="texto_suave">#A9A3D9</color>
+    <color name="neon_rosa">#FF4FA3</color>
+    <color name="neon_rosa_escuro">#B8216E</color>
+    <color name="neon_ciano">#22E0D0</color>
+    <color name="neon_amarelo">#FFD23F</color>
+    <color name="erro_arcade">#FF5C6C</color>
+    <color name="ciano_translucido">#3322E0D0</color>
+    <color name="rosa_translucido">#33FF4FA3</color>
+    <color name="scrim_navegacao">#990D0B1E</color>
+    <color name="texto_sobre_pista">#0D0B1E</color>
+
+    <!-- Pistas do Código Secreto -->
+    <color name="pista_verde">#3DDC84</color>
+    <color name="pista_amarela">#FFD23F</color>
+    <color name="pista_cinza">#7A7F9A</color>
+
+    <!-- Resultados -->
+    <color name="resultado_vitoria">#3DDC84</color>
+    <color name="resultado_derrota">#FF5C6C</color>
+    <color name="resultado_empate">#FFD23F</color>
+</resources>

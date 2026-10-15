@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollApresentacao"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_tela_arcade"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutApresentacao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="@dimen/logo_apresentacao"
+            android:layout_height="@dimen/logo_apresentacao"
+            android:layout_marginTop="@dimen/margem_tela"
+            android:contentDescription="@string/cd_logo"
+            android:src="@drawable/img_logo_joystick"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTituloApp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margem_tela"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textAppearance="?attr/textAppearanceDisplaySmall"
+            android:textColor="@color/neon_rosa"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgLogo" />
+
+        <TextView
+            android:id="@+id/tvSlogan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margem_minima"
+            android:gravity="center"
+            android:text="@string/slogan"
+            android:textAppearance="?attr/textAppearanceBodyLarge"
+            android:textColor="@color/neon_ciano"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTituloApp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardIntegrantes"
+            style="@style/PocketArcade.Painel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSlogan">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/margem_tela">
+
+                <TextView
+                    android:id="@+id/tvRotuloIntegrante"
+                    style="@style/PocketArcade.Rotulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rotulo_integrante" />
+
+                <TextView
+                    android:id="@+id/tvNomeIntegrante1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margem_minima"
+                    android:text="@string/integrante1_nome"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textColor="@color/texto_claro" />
+
+                <TextView
+                    android:id="@+id/tvMatriculaIntegrante1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/integrante1_matricula"
+                    android:textAppearance="?attr/textAppearanceBodyMedium"
+                    android:textColor="@color/texto_suave" />
+
+                <TextView
+                    android:id="@+id/tvNomeIntegrante2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margem_pequena"
+                    android:text="@string/integrante2_nome"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textColor="@color/texto_claro" />
+
+                <TextView
+                    android:id="@+id/tvMatriculaIntegrante2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/integrante2_matricula"
+                    android:textAppearance="?attr/textAppearanceBodyMedium"
+                    android:textColor="@color/texto_suave" />
+
+                <TextView
+                    android:id="@+id/tvCursoIntegrantes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margem_pequena"
+                    android:text="@string/integrantes_curso"
+                    android:textAppearance="?attr/textAppearanceBodyMedium"
+                    android:textColor="@color/neon_ciano" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tvUltimoModulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margem_tela"
+            android:background="@drawable/bg_destaque"
+            android:paddingHorizontal="@dimen/margem_media"
+            android:paddingVertical="@dimen/margem_pequena"
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            android:textColor="@color/neon_ciano"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardIntegrantes"
+            tools:text="Último módulo usado: Código Secreto"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvRotuloApelido"
+            style="@style/PocketArcade.Rotulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:labelFor="@id/etApelido"
+            android:text="@string/rotulo_apelido"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvUltimoModulo" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilApelido"
+            style="@style/PocketArcade.CampoTexto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margem_pequena"
+            android:hint="@string/hint_apelido"
+            app:counterEnabled="true"
+            app:counterMaxLength="16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvRotuloApelido">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etApelido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionGo"
+                android:inputType="textPersonName|textCapWords"
+                android:maxLength="16"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEntrar"
+            style="@style/Widget.Material3.Button.Icon"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="@dimen/margem_media"
+            android:text="@string/botao_entrar"
+            android:textSize="16sp"
+            app:icon="@drawable/ic_play"
+            app:iconGravity="textStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tilApelido" />
+
+        <TextView
+            android:id="@+id/tvRodape"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="@string/rodape_apresentacao"
+            android:textAppearance="?attr/textAppearanceBodySmall"
+            android:textColor="@color/texto_suave"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnEntrar"
+            app:layout_constraintVertical_bias="1.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

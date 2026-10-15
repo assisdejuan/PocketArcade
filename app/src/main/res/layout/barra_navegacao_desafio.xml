@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Barra inferior reutilizada pelos quatro desafios. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/painel_arcade"
+    android:orientation="horizontal"
+    android:paddingHorizontal="@dimen/margem_tela"
+    android:paddingVertical="@dimen/margem_pequena">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnVoltarCentral"
+        style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margem_pequena"
+        android:layout_weight="1"
+        android:text="@string/botao_voltar_central"
+        app:icon="@drawable/ic_voltar" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnEncerrarSessao"
+        style="@style/Widget.Material3.Button.TonalButton.Icon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/botao_encerrar_sessao"
+        app:icon="@drawable/ic_sair" />
+</LinearLayout>

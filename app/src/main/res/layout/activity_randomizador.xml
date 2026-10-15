@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutRaizRandomizador"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_tela_arcade"
+    android:orientation="vertical"
+    tools:context=".RandomizadorActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarRandomizador"
+        style="@style/PocketArcade.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:navigationContentDescription="@string/cd_voltar"
+        app:navigationIcon="@drawable/ic_voltar"
+        app:title="@string/titulo_randomizador"
+        tools:subtitle="Jogador: Ana" />
+
+    <!-- O cabeçalho (cadastro, ações e sorteio) recolhe ao rolar a lista,
+         liberando espaço em telas pequenas e em paisagem. -->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorRandomizador"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarRandomizador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:elevation="0dp"
+            app:liftOnScroll="false">
+
+            <LinearLayout
+                android:id="@+id/layoutCabecalhoRandomizador"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_scrollFlags="scroll|enterAlways|snap">
+
+            <!-- Cadastro: valor + categoria -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margem_tela"
+                android:baselineAligned="false"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilValor"
+                    style="@style/PocketArcade.CampoTexto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margem_pequena"
+                    android:layout_weight="1"
+                    android:hint="@string/hint_valor">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etValor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionDone"
+                        android:inputType="textCapSentences"
+                        android:maxLength="40"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Spinner
+                    android:id="@+id/spCategoria"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_spinner"
+                    android:contentDescription="@string/rotulo_categoria"
+                    android:popupBackground="@color/painel_arcade"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+
+            <!-- Ações -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margem_tela"
+                android:layout_marginTop="@dimen/margem_pequena"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAdicionar"
+                    style="@style/Widget.Material3.Button.TonalButton.Icon"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margem_pequena"
+                    android:layout_weight="1"
+                    android:text="@string/botao_adicionar"
+                    app:icon="@drawable/ic_adicionar" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSortear"
+                    style="@style/Widget.Material3.Button.Icon"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margem_pequena"
+                    android:layout_weight="1"
+                    android:text="@string/botao_sortear"
+                    app:icon="@drawable/ic_dado" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAlternarLayout"
+                    style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/cd_alternar_grade"
+                    android:text="@string/botao_grade"
+                    app:icon="@drawable/ic_grade" />
+            </LinearLayout>
+
+            <!-- Resultado do sorteio -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardSorteio"
+                style="@style/PocketArcade.Painel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margem_tela"
+                android:layout_marginTop="@dimen/margem_media"
+                app:strokeColor="@color/neon_amarelo">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/margem_media">
+
+                    <ImageView
+                        android:id="@+id/imgCategoriaSorteada"
+                        android:layout_width="@dimen/icone_pequeno"
+                        android:layout_height="@dimen/icone_pequeno"
+                        android:contentDescription="@string/cd_icone_randomizador"
+                        android:src="@drawable/ic_dado"
+                        app:tint="@color/neon_amarelo" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margem_media"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvTituloSorteio"
+                            style="@style/PocketArcade.Rotulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:letterSpacing="0.02"
+                            android:text="@string/sorteio_aguardando"
+                            android:textAllCaps="false" />
+
+                        <TextView
+                            android:id="@+id/tvItemSorteado"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceTitleLarge"
+                            android:textColor="@color/neon_amarelo"
+                            android:textStyle="bold"
+                            android:visibility="gone"
+                            tools:text="Matrix"
+                            tools:visibility="visible" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/tvDicaLista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margem_tela"
+                android:layout_marginTop="@dimen/margem_pequena"
+                android:text="@string/dica_lista"
+                android:textAppearance="?attr/textAppearanceBodySmall"
+                android:textColor="@color/texto_suave" />
+            </LinearLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPalavras"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingHorizontal="10dp"
+            android:paddingTop="@dimen/margem_minima"
+            android:paddingBottom="@dimen/margem_pequena"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:itemCount="5"
+            tools:listitem="@layout/item_palavra_lista" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <include
+        android:id="@+id/barraNavegacao"
+        layout="@layout/barra_navegacao_desafio" />
+</LinearLayout>

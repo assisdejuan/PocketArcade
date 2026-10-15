@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pocket Arcade</string>
+
+    <!-- Comuns -->
+    <string name="jogador_atual">Jogador: %1$s</string>
+    <string name="botao_voltar_central">Voltar à central</string>
+    <string name="botao_encerrar_sessao">Encerrar sessão</string>
+    <string name="botao_nova_partida">Nova partida</string>
+    <string name="cd_voltar">Voltar</string>
+    <string name="erro_dados_sessao">Não encontramos um apelido válido. Voltando…</string>
+
+    <!-- Tela 1 · Apresentação -->
+    <string name="slogan">Quatro desafios cabem no seu bolso.</string>
+    <string name="rotulo_integrante">Desenvolvido por</string>
+    <!-- Integrantes da dupla -->
+    <string name="integrante1_nome">Juan Assis</string>
+    <string name="integrante1_matricula">Matrícula: 20241012000050</string>
+    <string name="integrante2_nome">Pedro Weverton</string>
+    <string name="integrante2_matricula">Matrícula: 20241012000948</string>
+    <string name="integrantes_curso">Curso: Análise e Desenvolvimento de Sistemas</string>
+    <string name="rotulo_apelido">Seu apelido</string>
+    <string name="hint_apelido">Digite seu apelido</string>
+    <string name="botao_entrar">Entrar no Pocket Arcade</string>
+    <string name="erro_apelido">O apelido precisa de pelo menos 3 caracteres</string>
+    <string name="ultimo_modulo">Último módulo usado: %1$s</string>
+    <string name="rodape_apresentacao">Insira uma ficha imaginária e divirta-se.</string>
+    <string name="cd_logo">Logotipo do Pocket Arcade: um joystick neon</string>
+
+    <!-- Tela 2 · Central de Desafios -->
+    <string name="titulo_central">Central de Desafios</string>
+    <string name="saudacao">Olá, %1$s!</string>
+    <string name="introducao_central">Escolha um gabinete e aperte Abrir. Cada desafio guarda sua própria regra; quando quiser trocar de jogo, é só voltar para cá.</string>
+    <string name="botao_abrir">Abrir</string>
+    <string name="painel_scanner_titulo">Scanner</string>
+    <string name="painel_scanner_descricao">Analise uma mensagem: conte caracteres, palavras e vogais, inverta o texto e descubra se é um palíndromo.</string>
+    <string name="painel_arena_titulo">Arena</string>
+    <string name="painel_arena_descricao">Dispute uma melhor de três de Pedra, Papel e Tesoura contra o dispositivo. Quem fizer dois pontos primeiro vence.</string>
+    <string name="painel_cofre_titulo">Código Secreto</string>
+    <string name="painel_cofre_descricao">Descubra os quatro dígitos diferentes do cofre em até oito tentativas, guiado por pistas coloridas.</string>
+    <string name="painel_randomizador_titulo">Randomizador</string>
+    <string name="painel_randomizador_descricao">Cadastre palavras por categoria e deixe a sorte escolher um filme, uma comida, um lugar ou um desafio.</string>
+    <string name="dica_central_titulo">Dica do fliperama</string>
+    <string name="dica_central">Use Voltar à central para trocar de desafio. Encerrar sessão leva você direto à tela inicial, sem empilhar telas repetidas.</string>
+    <string name="botao_sair_central">Sair da central</string>
+    <string name="cd_icone_scanner">Ícone de envelope do Scanner de Mensagens</string>
+    <string name="cd_icone_arena">Ícone de tesoura da Arena</string>
+    <string name="cd_icone_cofre">Ícone de cadeado do Código Secreto</string>
+    <string name="cd_icone_randomizador">Ícone de embaralhar do Randomizador</string>
+
+    <!-- Nomes dos módulos (enviados à Tela 1) -->
+    <string name="modulo_scanner">Scanner de Mensagens</string>
+    <string name="modulo_arena">Pedra, Papel e Tesoura</string>
+    <string name="modulo_cofre">Código Secreto</string>
+    <string name="modulo_randomizador">Randomizador de Palavras</string>
+
+    <!-- Tela 3 · Scanner de Mensagens -->
+    <string name="titulo_scanner">Scanner de Mensagens</string>
+    <string name="hint_mensagem">Mensagem para analisar</string>
+    <string name="ajuda_mensagem">Mínimo de 3 caracteres</string>
+    <string name="botao_analisar">Analisar</string>
+    <string name="botao_limpar">Limpar</string>
+    <string name="erro_mensagem_vazia">Digite uma mensagem para analisar</string>
+    <string name="erro_mensagem_curta">A mensagem precisa de pelo menos 3 caracteres</string>
+    <string name="cabecalho_medida">Medida</string>
+    <string name="cabecalho_resultado">Resultado</string>
+    <string name="medida_caracteres">Caracteres sem espaços</string>
+    <string name="medida_palavras">Palavras</string>
+    <string name="medida_vogais">Vogais</string>
+    <string name="medida_invertido">Texto invertido</string>
+    <string name="medida_palindromo">Palíndromo</string>
+    <string name="sim">Sim</string>
+    <string name="nao">Não</string>
+
+    <!-- Tela 4 · Arena -->
+    <string name="titulo_arena">Arena</string>
+    <string name="regra_arena">Melhor de três: vence quem alcançar duas vitórias primeiro. Empates não somam pontos.</string>
+    <string name="rotulo_escolha">Escolha sua jogada</string>
+    <string name="jogada_pedra">Pedra</string>
+    <string name="jogada_papel">Papel</string>
+    <string name="jogada_tesoura">Tesoura</string>
+    <string name="rotulo_dispositivo">Dispositivo</string>
+    <string name="versus">VS</string>
+    <string name="placar">%1$d × %2$d</string>
+    <string name="aguardando_jogada">Faça sua jogada para começar</string>
+    <string name="rodada_vitoria">Você venceu a rodada!</string>
+    <string name="rodada_derrota">O dispositivo venceu a rodada</string>
+    <string name="rodada_empate">Empate! Ninguém pontua</string>
+    <string name="partida_vitoria">🏆 Vitória! Você venceu por %1$d × %2$d</string>
+    <string name="partida_derrota">💀 Derrota! O dispositivo venceu por %2$d × %1$d</string>
+    <string name="cd_escolha_jogador">Sua escolha: %1$s</string>
+    <string name="cd_escolha_dispositivo">Escolha do dispositivo: %1$s</string>
+    <string name="cd_escolha_pendente">Escolha ainda não feita</string>
+
+    <!-- Tela 5 · Código Secreto -->
+    <string name="titulo_cofre">Código Secreto</string>
+    <string name="codigo_oculto">• • • •</string>
+    <string name="instrucao_cofre">Digite quatro números diferentes</string>
+    <string name="hint_palpite">Seu palpite</string>
+    <string name="botao_tentar">Tentar</string>
+    <plurals name="tentativas_restantes">
+        <item quantity="one">%d tentativa restante</item>
+        <item quantity="other">%d tentativas restantes</item>
+    </plurals>
+    <string name="legenda_verde">Posição certa</string>
+    <string name="legenda_amarela">Posição errada</string>
+    <string name="legenda_cinza">Não existe</string>
+    <string name="titulo_historico">Histórico de tentativas</string>
+    <string name="historico_vazio">Nenhuma tentativa ainda.</string>
+    <string name="linha_historico">#%1$d</string>
+    <string name="resumo_pistas">%1$d verde · %2$d amarelo · %3$d cinza</string>
+    <string name="erro_palpite_vazio">Digite um palpite</string>
+    <string name="erro_palpite_tamanho">Digite exatamente 4 números</string>
+    <string name="erro_palpite_repetido">Os dígitos não podem se repetir</string>
+    <string name="cofre_vitoria">🔓 Cofre aberto!</string>
+    <string name="cofre_derrota">🔒 Cofre trancado!</string>
+    <plurals name="cofre_detalhes_tentativas">
+        <item quantity="one">%d tentativa usada</item>
+        <item quantity="other">%d tentativas usadas</item>
+    </plurals>
+    <string name="cofre_detalhes_tempo">Tempo: %1$s</string>
+    <string name="cofre_detalhes_codigo">Código: %1$s</string>
+    <string name="tempo_segundos">%1$d s</string>
+    <string name="tempo_minutos">%1$d min %2$02d s</string>
+    <string name="cd_cadeado">Cadeado do cofre</string>
+
+    <!-- Tela 6 · Randomizador -->
+    <string name="titulo_randomizador">Randomizador</string>
+    <string name="hint_valor">Palavra</string>
+    <string name="rotulo_categoria">Categoria</string>
+    <string name="botao_adicionar">Adicionar</string>
+    <string name="botao_sortear">Sortear</string>
+    <string name="botao_grade">Grade</string>
+    <string name="botao_lista">Lista</string>
+    <string name="cd_alternar_grade">Exibir itens em grade</string>
+    <string name="cd_alternar_lista">Exibir itens em lista</string>
+    <string name="erro_valor">Digite pelo menos 2 caracteres</string>
+    <string name="msg_item_adicionado">%1$s adicionado em %2$s</string>
+    <string name="msg_item_removido">%1$s removido</string>
+    <string name="msg_categoria_vazia">Nenhum item em %1$s para sortear</string>
+    <string name="sorteio_aguardando">Escolha a categoria e toque em Sortear</string>
+    <string name="sorteio_titulo">Sorteado em %1$s</string>
+    <string name="dica_lista">Segure um item para excluí-lo</string>
+    <string name="cd_icone_categoria">Categoria %1$s</string>
+
+    <string name="categoria_filmes">Filmes</string>
+    <string name="categoria_comidas">Comidas</string>
+    <string name="categoria_lugares">Lugares</string>
+    <string name="categoria_desafios">Desafios</string>
+    <string name="categoria_jogos">Jogos</string>
+    <string-array name="categorias_sorteio">
+        <item>@string/categoria_filmes</item>
+        <item>@string/categoria_comidas</item>
+        <item>@string/categoria_lugares</item>
+        <item>@string/categoria_desafios</item>
+        <item>@string/categoria_jogos</item>
+    </string-array>
+
+    <!-- Itens iniciais de cada categoria (mesma ordem de categorias_sorteio) -->
+    <string-array name="itens_filmes">
+        <item>De Volta para o Futuro</item>
+        <item>Matrix</item>
+        <item>Toy Story</item>
+    </string-array>
+    <string-array name="itens_comidas">
+        <item>Pizza</item>
+        <item>Pastel de feira</item>
+        <item>Açaí</item>
+    </string-array>
+    <string-array name="itens_lugares">
+        <item>Praia</item>
+        <item>Museu</item>
+        <item>Fliperama</item>
+    </string-array>
+    <string-array name="itens_desafios">
+        <item>Imitar um robô por 30 segundos</item>
+        <item>Falar só com rimas</item>
+        <item>Cantar o refrão favorito</item>
+    </string-array>
+    <string-array name="itens_jogos">
+        <item>Pac-Man</item>
+        <item>Tetris</item>
+        <item>Street Fighter II</item>
+    </string-array>
+</resources>

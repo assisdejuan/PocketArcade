@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutRaizArena"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_tela_arcade"
+    android:orientation="vertical"
+    tools:context=".ArenaActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarArena"
+        style="@style/PocketArcade.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:navigationContentDescription="@string/cd_voltar"
+        app:navigationIcon="@drawable/ic_voltar"
+        app:title="@string/titulo_arena"
+        tools:subtitle="Jogador: Ana" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollArena"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/margem_tela"
+            android:paddingBottom="@dimen/margem_tela">
+
+            <TextView
+                android:id="@+id/tvRegraArena"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/regra_arena"
+                android:textAppearance="?attr/textAppearanceBodyMedium"
+                android:textColor="@color/texto_suave" />
+
+            <!-- Placar jogador × dispositivo -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardPlacar"
+                style="@style/PocketArcade.Painel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margem_media">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/margem_media">
+
+                    <TextView
+                        android:id="@+id/tvNomeJogadorPlacar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                        android:textColor="@color/neon_ciano"
+                        tools:text="Ana" />
+
+                    <TextView
+                        android:id="@+id/tvPlacar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/texto_claro"
+                        android:textSize="@dimen/texto_placar"
+                        android:textStyle="bold"
+                        tools:text="1 × 0" />
+
+                    <TextView
+                        android:id="@+id/tvNomeDispositivoPlacar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/rotulo_dispositivo"
+                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                        android:textColor="@color/neon_rosa" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Batalha: escolha do jogador VS escolha do dispositivo -->
+            <LinearLayout
+                android:id="@+id/layoutBatalha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margem_tela"
+                android:baselineAligned="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgEscolhaJogador"
+                        android:layout_width="@dimen/imagem_batalha"
+                        android:layout_height="@dimen/imagem_batalha"
+                        android:contentDescription="@string/cd_escolha_pendente"
+                        android:src="@drawable/img_pendente" />
+
+                    <TextView
+                        android:id="@+id/tvEscolhaJogador"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margem_minima"
+                        android:textAppearance="?attr/textAppearanceTitleSmall"
+                        android:textColor="@color/neon_ciano"
+                        tools:text="Pedra" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvVersus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/versus"
+                    android:textColor="@color/neon_amarelo"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgEscolhaDispositivo"
+                        android:layout_width="@dimen/imagem_batalha"
+                        android:layout_height="@dimen/imagem_batalha"
+                        android:contentDescription="@string/cd_escolha_pendente"
+                        android:src="@drawable/img_pendente" />
+
+                    <TextView
+                        android:id="@+id/tvEscolhaDispositivo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margem_minima"
+                        android:textAppearance="?attr/textAppearanceTitleSmall"
+                        android:textColor="@color/neon_rosa"
+                        tools:text="Tesoura" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvResultadoRodada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margem_media"
+                android:gravity="center"
+                android:text="@string/aguardando_jogada"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                android:textColor="@color/texto_claro"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvResultadoPartida"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margem_pequena"
+                android:background="@drawable/bg_destaque"
+                android:gravity="center"
+                android:padding="@dimen/margem_media"
+                android:textAppearance="?attr/textAppearanceTitleLarge"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:text="🏆 Vitória! Você venceu por 2 × 1"
+                tools:visibility="visible" />
+
+            <!-- Três botões com imagens -->
+            <TextView
+                android:id="@+id/tvRotuloEscolha"
+                style="@style/PocketArcade.Rotulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margem_tela"
+                android:text="@string/rotulo_escolha" />
+
+            <LinearLayout
+                android:id="@+id/layoutJogadas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margem_pequena"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/btnPedra"
+                        android:layout_width="@dimen/botao_jogada"
+                        android:layout_height="@dimen/botao_jogada"
+                        android:background="@drawable/bg_botao_jogada"
+                        android:contentDescription="@string/jogada_pedra"
+                        android:padding="14dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_pedra" />
+
+                    <TextView
+                        android:id="@+id/tvRotuloPedra"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margem_minima"
+                        android:importantForAccessibility="no"
+                        android:text="@string/jogada_pedra"
+                        android:textColor="@color/texto_claro" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/btnPapel"
+                        android:layout_width="@dimen/botao_jogada"
+                        android:layout_height="@dimen/botao_jogada"
+                        android:background="@drawable/bg_botao_jogada"
+                        android:contentDescription="@string/jogada_papel"
+                        android:padding="14dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_papel" />
+
+                    <TextView
+                        android:id="@+id/tvRotuloPapel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margem_minima"
+                        android:importantForAccessibility="no"
+                        android:text="@string/jogada_papel"
+                        android:textColor="@color/texto_claro" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/btnTesoura"
+                        android:layout_width="@dimen/botao_jogada"
+                        android:layout_height="@dimen/botao_jogada"
+                        android:background="@drawable/bg_botao_jogada"
+                        android:contentDescription="@string/jogada_tesoura"
+                        android:padding="14dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_tesoura" />
+
+                    <TextView
+                        android:id="@+id/tvRotuloTesoura"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margem_minima"
+                        android:importantForAccessibility="no"
+                        android:text="@string/jogada_tesoura"
+                        android:textColor="@color/texto_claro" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNovaPartidaArena"
+                style="@style/Widget.Material3.Button.Icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margem_tela"
+                android:text="@string/botao_nova_partida"
+                app:icon="@drawable/ic_reiniciar" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/barraNavegacao"
+        layout="@layout/barra_navegacao_desafio" />
+</LinearLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.PocketArcade" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/neon_rosa</item>
+        <item name="colorOnPrimary">@color/noite_arcade</item>
+        <item name="colorPrimaryContainer">@color/neon_rosa_escuro</item>
+        <item name="colorOnPrimaryContainer">@color/texto_claro</item>
+        <item name="colorSecondary">@color/neon_ciano</item>
+        <item name="colorOnSecondary">@color/noite_arcade</item>
+        <item name="colorSecondaryContainer">@color/painel_destaque</item>
+        <item name="colorOnSecondaryContainer">@color/texto_claro</item>
+        <item name="colorTertiary">@color/neon_amarelo</item>
+        <item name="colorOnTertiary">@color/noite_arcade</item>
+        <item name="colorError">@color/erro_arcade</item>
+        <item name="android:colorBackground">@color/noite_arcade</item>
+        <item name="colorOnBackground">@color/texto_claro</item>
+        <item name="colorSurface">@color/noite_arcade</item>
+        <item name="colorOnSurface">@color/texto_claro</item>
+        <item name="colorOnSurfaceVariant">@color/texto_suave</item>
+        <item name="colorSurfaceContainer">@color/painel_arcade</item>
+        <item name="colorSurfaceContainerHigh">@color/painel_arcade</item>
+        <item name="colorSurfaceContainerHighest">@color/painel_destaque</item>
+        <item name="colorOutline">@color/borda_painel</item>
+        <item name="android:windowBackground">@color/noite_arcade</item>
+    </style>
+
+    <style name="PocketArcade.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="titleTextColor">@color/neon_rosa</item>
+        <item name="subtitleTextColor">@color/texto_suave</item>
+        <item name="navigationIconTint">@color/neon_ciano</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="PocketArcade.Painel" parent="Widget.Material3.CardView.Filled">
+        <item name="cardBackgroundColor">@color/painel_arcade</item>
+        <item name="cardCornerRadius">@dimen/raio_painel</item>
+        <item name="strokeColor">@color/borda_painel</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <style name="PocketArcade.CampoTexto" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/neon_ciano</item>
+        <item name="hintTextColor">@color/neon_ciano</item>
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+    </style>
+
+    <style name="PocketArcade.Rotulo" parent="">
+        <item name="android:textColor">@color/texto_suave</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.1</item>
+    </style>
+
+    <style name="PocketArcade.Chip" parent="">
+        <item name="android:background">@drawable/bg_chip</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:textColor">@color/neon_ciano</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="PocketArcade.CelulaTabela" parent="">
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:textColor">@color/texto_claro</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="PocketArcade.CelulaTabela.Valor">
+        <item name="android:textColor">@color/neon_ciano</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">end</item>
+    </style>
+
+    <style name="PocketArcade.Pista" parent="">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+        <item name="android:textColor">@color/texto_sobre_pista</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Microanimação de entrada inválida: o elemento "balança" para os lados. -->
+<translate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="400"
+    android:fromXDelta="0"
+    android:interpolator="@anim/ciclo_tremor"
+    android:toXDelta="14" />

@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Raiz: NestedScrollView com um único filho direto (LinearLayout vertical). -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollCentral"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_tela_arcade"
+    android:fillViewport="true"
+    tools:context=".CentralDesafiosActivity">
+
+    <LinearLayout
+        android:id="@+id/layoutCentral"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutAnimation="@anim/layout_entrada_central"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/margem_tela"
+        android:paddingBottom="@dimen/margem_tela">
+
+        <TextView
+            android:id="@+id/tvTituloCentral"
+            style="@style/PocketArcade.Rotulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margem_tela"
+            android:text="@string/titulo_central" />
+
+        <TextView
+            android:id="@+id/tvSaudacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margem_minima"
+            android:textAppearance="?attr/textAppearanceHeadlineMedium"
+            android:textColor="@color/neon_rosa"
+            android:textStyle="bold"
+            tools:text="Olá, jogador!" />
+
+        <TextView
+            android:id="@+id/tvIntroducaoCentral"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margem_pequena"
+            android:lineSpacingMultiplier="1.15"
+            android:text="@string/introducao_central"
+            android:textAppearance="?attr/textAppearanceBodyLarge"
+            android:textColor="@color/texto_suave" />
+
+        <!-- Painel 1 · Scanner -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/painelScanner"
+            style="@style/PocketArcade.Painel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margem_tela">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/altura_minima_painel"
+                android:orientation="horizontal"
+                android:padding="@dimen/margem_tela">
+
+                <ImageView
+                    android:id="@+id/imgPainelScanner"
+                    android:layout_width="@dimen/icone_painel"
+                    android:layout_height="@dimen/icone_painel"
+                    android:background="@drawable/bg_icone_painel"
+                    android:contentDescription="@string/cd_icone_scanner"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_mensagem"
+                    app:tint="@color/neon_rosa" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margem_tela"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTituloPainelScanner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/painel_scanner_titulo"
+                        android:textAppearance="?attr/textAppearanceTitleLarge"
+                        android:textColor="@color/texto_claro" />
+
+                    <TextView
+                        android:id="@+id/tvDescricaoPainelScanner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margem_minima"
+                        android:text="@string/painel_scanner_descricao"
+                        android:textAppearance="?attr/textAppearanceBodyMedium"
+                        android:textColor="@color/texto_suave" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnAbrirScanner"
+                        style="@style/Widget.Material3.Button.TonalButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margem_pequena"
+                        android:text="@string/botao_abrir" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Painel 2 · Arena -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/painelArena"
+            style="@style/PocketArcade.Painel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margem_media">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/altura_minima_painel"
+                android:orientation="horizontal"
+                android:padding="@dimen/margem_tela">
+
+                <ImageView
+                    android:id="@+id/imgPainelArena"
+                    android:layout_width="@dimen/icone_painel"
+                    android:layout_height="@dimen/icone_painel"
+                    android:background="@drawable/bg_icone_painel"
+                    android:contentDescription="@string/cd_icone_arena"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_tesoura"
+                    app:tint="@color/neon_rosa" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margem_tela"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTituloPainelArena"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/painel_arena_titulo"
+                        android:textAppearance="?attr/textAppearanceTitleLarge"
+                        android:textColor="@color/texto_claro" />
+
+                    <TextView
+                        android:id="@+id/tvDescricaoPainelArena"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margem_minima"
+                        android:text="@string/painel_arena_descricao"
+                        android:textAppearance="?attr/textAppearanceBodyMedium"
+                        android:textColor="@color/texto_suave" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnAbrirArena"
+                        style="@style/Widget.Material3.Button.TonalButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margem_pequena"
+                        android:text="@string/botao_abrir" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Painel 3 · Código Secreto -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/painelCofre"
+            style="@style/PocketArcade.Painel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margem_media">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/altura_minima_painel"
+                android:orientation="horizontal"
+                android:padding="@dimen/margem_tela">
+
+                <ImageView
+                    android:id="@+id/imgPainelCofre"
+                    android:layout_width="@dimen/icone_painel"
+                    android:layout_height="@dimen/icone_painel"
+                    android:background="@drawable/bg_icone_painel"
+                    android:contentDescription="@string/cd_icone_cofre"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_cadeado"
+                    app:tint="@color/neon_rosa" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margem_tela"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTituloPainelCofre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/painel_cofre_titulo"
+                        android:textAppearance="?attr/textAppearanceTitleLarge"
+                        android:textColor="@color/texto_claro" />
+
+                    <TextView
+                        android:id="@+id/tvDescricaoPainelCofre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margem_minima"
+                        android:text="@string/painel_cofre_descricao"
+                        android:textAppearance="?attr/textAppearanceBodyMedium"
+                        android:textColor="@color/texto_suave" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnAbrirCofre"
+                        style="@style/Widget.Material3.Button.TonalButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margem_pequena"
+                        android:text="@string/botao_abrir" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Painel 4 · Randomizador -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/painelRandomizador"
+            style="@style/PocketArcade.Painel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margem_media">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/altura_minima_painel"
+                android:orientation="horizontal"
+                android:padding="@dimen/margem_tela">
+
+                <ImageView
+                    android:id="@+id/imgPainelRandomizador"
+                    android:layout_width="@dimen/icone_painel"
+                    android:layout_height="@dimen/icone_painel"
+                    android:background="@drawable/bg_icone_painel"
+                    android:contentDescription="@string/cd_icone_randomizador"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_embaralhar"
+                    app:tint="@color/neon_rosa" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margem_tela"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTituloPainelRandomizador"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/painel_randomizador_titulo"
+                        android:textAppearance="?attr/textAppearanceTitleLarge"
+                        android:textColor="@color/texto_claro" />
+
+                    <TextView
+                        android:id="@+id/tvDescricaoPainelRandomizador"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margem_minima"
+                        android:text="@string/painel_randomizador_descricao"
+                        android:textAppearance="?attr/textAppearanceBodyMedium"
+                        android:textColor="@color/texto_suave" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnAbrirRandomizador"
+                        style="@style/Widget.Material3.Button.TonalButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margem_pequena"
+                        android:text="@string/botao_abrir" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tvTituloDica"
+            style="@style/PocketArcade.Rotulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/dica_central_titulo" />
+
+        <TextView
+            android:id="@+id/tvDicaCentral"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margem_minima"
+            android:text="@string/dica_central"
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            android:textColor="@color/texto_suave" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSairCentral"
+            style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margem_tela"
+            android:text="@string/botao_sair_central"
+            app:icon="@drawable/ic_voltar" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
